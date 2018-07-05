@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ManualScrapperComponent } from './manual-scrapper/manual-scrapper.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ManualScrapperComponent
   ],
   imports: [
     BrowserModule
