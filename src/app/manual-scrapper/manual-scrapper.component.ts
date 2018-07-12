@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrapeService } from '../scrape.service';
 
 @Component({
   selector: 'app-manual-scrapper',
@@ -8,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class ManualScrapperComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrapeService: ScrapeService) { }
+
+  response: string;
+  url: string;
+
+
+  ManualScrape(): void {
+    this.scrapeService.ScrapeURL(this.url).subscribe(data => this.response = data.toString());
+  }
 
   ngOnInit() {
   }
