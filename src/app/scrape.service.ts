@@ -12,7 +12,9 @@ export class ScrapeService {
   functions: firebase.functions.Functions;
 
   constructor() {
-    this.functions = firebase.initializeApp(environment.firebase).functions();
+    if (!firebase.apps.length) {
+      this.functions = firebase.initializeApp(environment.firebase).functions();
+    }
   }
 
   ScrapeURL(url: string): Observable<string> {

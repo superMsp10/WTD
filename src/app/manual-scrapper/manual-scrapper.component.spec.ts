@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManualScrapperComponent } from './manual-scrapper.component';
+import { FormsModule } from '@angular/forms';
 
 describe('ManualScrapperComponent', () => {
   let component: ManualScrapperComponent;
@@ -8,7 +9,8 @@ describe('ManualScrapperComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManualScrapperComponent ]
+      declarations: [ ManualScrapperComponent ],
+      imports: [FormsModule],
     })
     .compileComponents();
   }));
