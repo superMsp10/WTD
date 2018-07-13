@@ -9,7 +9,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">Enter URL</span>
         </div>
-        <input type="text" class="form-control" id="url" aria-describedby="basic-addon3">
+
+        <input type="text" class="form-control" [(ngModel)]='url'>
+
       </div>
       <button type="button" class="btn btn-primary" (click)="ManualScrape()">Scrape!</button>
 

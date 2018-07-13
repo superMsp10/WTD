@@ -10,13 +10,12 @@ import { ScrapeService } from '../scrape.service';
 export class ManualScrapperComponent implements OnInit {
 
   constructor(private scrapeService: ScrapeService) { }
-
   response: string;
-  url: string;
 
+  url: string = "https://www.google.com/";
 
   ManualScrape(): void {
-    this.scrapeService.ScrapeURL(this.url).subscribe(data => this.response = data.toString());
+    this.scrapeService.ScrapeURL(this.url).subscribe(data => this.response = data);
   }
 
   ngOnInit() {
